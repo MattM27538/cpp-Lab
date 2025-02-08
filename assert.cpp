@@ -19,4 +19,6 @@ int main(){
 
     //Fail to print to console to confirm second assert failure.
     std::cout << "First assert passed." << std::endl;
+
+    return 0;
 }

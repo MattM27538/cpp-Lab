@@ -1,5 +1,6 @@
 #include <cassert>
 #include <iostream>
+#include <array>
 
 
 int main(){
@@ -19,7 +20,7 @@ int main(){
     //Fail to print to console to confirm second assert failure.
     std::cout << "Second assert passed. (This should not print if previous statement is uncommented)\n";
 
-    constexpr int myArray[4] ={0,1,2,3};
+    constexpr std::array<int,4> myArray={0,1,2,3};
 
     //Test static_assert. Evaluated at compile time. Size of array is 16bytes. Compilation will fail.
     static_assert(sizeof(myArray)<4,"Static assert failure. Size of array is greater than 4.");

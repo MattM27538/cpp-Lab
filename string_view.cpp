@@ -20,13 +20,13 @@ int main(){
     std::cout<<"new string_view = "<< strView<<"\n";
 
     //String_view can we initialized from std::string
-    std::string strToStrView={"assign string to string_view test successful"};
-    std::string_view strView2=strToStrView;
+    const std::string strToStrView={"assign string to string_view test successful"};
+    std::string_view strView2={strToStrView};
     std::cout<<"strView2 = "<<strToStrView<<"\n";
     
     //String_view can we initialized from std::string_view
-    std::string_view strViewToStrView={"assign string_view to string_view test successful"};
-    std::string_view strView3=strViewToStrView;
+    const std::string_view strViewToStrView={"assign string_view to string_view test successful"};
+    std::string_view strView3={strViewToStrView};
     std::cout<<"strView3 = "<<strView3<<"\n";
 
     //Unlike string string_view can we used as a constexpr

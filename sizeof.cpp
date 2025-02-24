@@ -1,7 +1,5 @@
 #include <iostream>
 
-using std::cout;
-
 struct myStruct{
 
 };
@@ -28,15 +26,16 @@ struct myStructWithCharAnd2IntMembers{
 };
 
 int main(){
+    using std::cout;
     //Test size of to see sizes of different data types
     //int
-    int x={5};
+    constexpr int x={5};
     cout << "Size of int is " << sizeof(x) << " bytes\n";
 
     cout << "Size of empty struct is " << sizeof(myStruct) << " bytes\n";
 
-    long long longlongTest={5};
-    cout << "Size of long long is " << sizeof(longlongTest) << " bytes\n";
+    long long myLongLong={5};
+    cout << "Size of long long is " << sizeof(myLongLong) << " bytes\n";
     
     cout << "Size of struct with 1 int member is " << sizeof(myStructWithIntMember) << " bytes\n";
 

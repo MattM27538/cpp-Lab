@@ -19,17 +19,17 @@ int main(){
 
     std::cout<<"new string_view = "<< strView<<"\n";
 
-    //String_view can we initialized from std::string
+    //String_view can be initialized from std::string
     const std::string strToStrView={"assign string to string_view test successful"};
     std::string_view strView2={strToStrView};
     std::cout<<"strView2 = "<<strToStrView<<"\n";
     
-    //String_view can we initialized from std::string_view
+    //String_view can be initialized from std::string_view
     const std::string_view strViewToStrView={"assign string_view to string_view test successful"};
     std::string_view strView3={strViewToStrView};
     std::cout<<"strView3 = "<<strView3<<"\n";
 
-    //Unlike string string_view can we used as a constexpr
+    //Unlike string string_view can be used as a constexpr
     constexpr std::string_view strView4={"constexpr string_view test successful"};
     //No compile error.
 

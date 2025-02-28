@@ -6,9 +6,6 @@ class Node{
     Node():val{0} {}
     Node(int val):val{val} {}
     Node(int val, Node *next):val{val}, next(next) {}
-
-    //Destructor
-    ~Node();
     
     //Public member Functions
     int getVal();

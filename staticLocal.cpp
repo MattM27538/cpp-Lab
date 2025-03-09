@@ -23,24 +23,24 @@ std::string_view getNameFromDatabase(){
     /*Ex:
       Initialize string by getting value from database. It is very expensive to copy a string, here you only need to
       copy the string once. Then you can use it anytime you recall the function to perform actions.*/
-    static const std::string databaseString={databaseName()}; 
+    static const std::string s_databaseString={databaseName()}; 
 
 
     //Convert string to string_view because string will not be altered and it is much more efficient to use string_view.
-    static const std::string_view databaseNameView={databaseString};
+    static const std::string_view s_databaseNameView={s_databaseString};
     
-    return databaseNameView;
+    return s_databaseNameView;
 }
 
 int main(){
     //Static local variables that have no initializer or a non-constexpr initializer are zero-initialized at program start
-    static int myInt;
+    static int s_myInt;
 
-    std::cout<<"Pre-definition myInt = "<<myInt<<"\n";
+    std::cout<<"Pre-definition myInt = "<<s_myInt<<"\n";
     
-    myInt={2};
+    s_myInt={2};
     
-    std::cout<<"Post-definition myInt = "<<myInt<<"\n";
+    std::cout<<"Post-definition myInt = "<<s_myInt<<"\n";
 
     std::cout<<"Item 1 ID = "<<uniqueID()<<"\n";
     std::cout<<"Item 2 ID = "<<uniqueID()<<"\n";

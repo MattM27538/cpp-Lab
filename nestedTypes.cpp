@@ -6,6 +6,7 @@ class Dog{
     public:
     //Nested enum inside of class. Classes can also be nested within other classes.
     //Nested type names must be fully defined before they can be used, so they are usually defined first.
+    //Breed is typed as an enum rather than enum class so that the enum values lives in scope "Dog" not "Dog::Breed".
         enum Breed{
             unknown,
             chihuahua,

@@ -11,11 +11,13 @@ int main(){
         std::cout<<"myVector index "<<index<<"= "<<myVector.data()[index]<<"\n";
     }
     
+    //Iterating backwards. Use std::ssize because using unsigned int would cause
+    //index value to wrap around after it reaches 0 and decrements causing invalid index access.
     for(auto index{std::ssize(myVector2)-1};index>=0;--index){
         std::cout<<"myVector2 index "<<index<<"= "<<myVector2.data()[index]<<"\n";
     }
 
-    //Iterating forward
+    //Iterating forward using signed int size_t.
     for(std::size_t i{0};i<myVector.size();++i){
         std::cout<<"type of i size_t= "<<typeid(i).name()<<"\n";
     }

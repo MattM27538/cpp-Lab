@@ -21,5 +21,6 @@ int main(){
     for(auto it{myArray.cbegin()};it!=myArray.cend();++it){
         std::cout<<*it<<" ";
     }
-    
+
+    return 0;
 }

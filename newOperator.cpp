@@ -10,7 +10,7 @@ int main(){
 
     std::cout<<"Address of myPtr after initialization = "<<&myPtr <<"\n";
     
-    //Reassign dynamic variable.
+    //Reassign dynamic variable. Note how address doesn't change.
     *myPtr=7;
     std::cout<<"Address of myPtr after reassignment = "<<&myPtr <<"\n";
 

@@ -21,6 +21,13 @@ int main(){
     for(auto it{myArray.cbegin()};it!=myArray.cend();++it){
         std::cout<<*it<<" ";
     }
+    
+    std::cout<<"\nmyArray elements in reverse are ";
+
+    //Iterate backwards using reverse iterators.
+    for(auto reverseIt{myArray.crbegin()};reverseIt!=myArray.crend();++reverseIt){
+        std::cout<<*reverseIt<<" ";
+    }
 
     return 0;
 }

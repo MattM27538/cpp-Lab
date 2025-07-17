@@ -8,9 +8,26 @@ int main(){
       used as possible (providing additional context).
     */
 
-    //named lamba
+    constexpr int captureNumber{7};
+
+    /*Named lamba. Brackets capture variables from parent scope and makes a clone of that 
+      variable. When the compiler encounters a lambda definition, it creates a custom object 
+      definition for the lambda. Each captured variable becomes a data member of the object.
+      When a lambda is called, operator() is invoked. By default, this operator() treats 
+      captures as const. Capture by reference should be preferred over capture by value 
+      whenever you would normally prefer passing an argument to a function by reference.
+    */
+
+    auto printCapturedVariable{
+        [captureNumber]()->void{
+            std::cout << "Captured number is " << captureNumber << "\n";
+        }
+    };
+
+    printCapturedVariable();
+
     auto isFirstDigitGreater{
-        [](int firstDigit, int secondDigit)->bool{
+        [captureNumber](int firstDigit, int secondDigit)->bool{
             return firstDigit>secondDigit;
         }
     };
